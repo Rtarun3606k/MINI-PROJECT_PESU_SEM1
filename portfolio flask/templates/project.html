@@ -1,0 +1,82 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+
+<!-- {% for info in allinfo %}
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <img src={{info.link}} class="imgp" alt="problem">
+      <p> name : {{info.pname}}</p>
+      <p> language : {{info.language}}</p>
+      < <p> link : {{info.link}}</p> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- {% endfor %}  -->
+
+
+<div class="container text-center hidden">
+  <div class="row row-cols-2 hidden">
+    <!-- <img src="{{image}}" class="imgp hidden" alt="problem"> -->
+    {% for info in allinfo %}
+    
+    <div class="col hidden">
+      <H3 class="pro-slo">PROJECT - {{loop.index}}</H3>
+      {% if info.img%}
+      <img src="/upload/{{info.id}}" class="imgp hidden" alt="problem">
+      
+      {% else%}
+    
+      
+      <img src="{{image}}" class="imgp hidden" alt="problem">
+      {% endif %}
+      <p class="p-of-project"> name : {{info.project_name}}</p>
+      <!-- <p> project_link : {{info.project_link}}</p> -->
+      <p class="p-of-project"> description : {{info.project_description}}</p>
+      <!-- <p> reach-link : {{info.project_reach_link}}</p> -->
+      <p class="p-of-project"> language : {{info.project_language}}</p>
+      <button class="btn " style="margin-left:35% ;"><a href="{{info.project_reach_link}}" class="butt-link ">view</a></button>
+      
+      
+   
+      
+    
+      
+      
+  
+    </div>
+    
+    {% endfor %}
+    
+  </div>
+  <!-- <h1>last updated 23-nov-2019</h1> -->
+</div>
+
+
+
+
+
+<!-- {% for info in allinfo %}
+  
+  <H3 class="pro-slo">PROJECT - {{loop.index}}</H3>
+<p> name : {{info.project_name}}</p>
+<p> project_link : {{info.project_link}}</p>
+<p> project_description : {{info.project_description}}</p>
+        <p> reach-link : {{info.project_reach_link}}</p>
+        <p> project_language : {{info.project_language}}</p>
+
+<a href="/deletee/{{info.id}}" type="button" class="btn-delete">Delete</button></a>
+{% endfor %} -->
+
+
+
+
+
+
+{% endblock %}

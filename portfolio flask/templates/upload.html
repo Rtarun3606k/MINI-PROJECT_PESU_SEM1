@@ -1,0 +1,128 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{allinfo.id}}{{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<h3></h3>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+
+<center>
+    <h2>Form to upload projects</h2>
+</center>
+
+<form class="hidden form-admin" method="POST" enctype="multipart/form-data">
+    <div class="formdiv">
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Name</label>
+            <input type="text" class="form-control" name="project_name" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="pic">select picture </label>
+            <input type="file" name="pic" />
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">link_reach</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="project_reach_link"
+                aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">language</label>
+            <input type="text" class="form-control" name="project_language" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">description</label>
+            <textarea type="text" class="form-control" name="project_desc" id="exampleInputPassword1" rows="2"
+                cols="1"> </textarea>
+        </div>
+        <div class=" mb-3">
+            <h5 for="btn">click here to return to admin page</h5>
+            <div class="sub-admin">
+                <button class="btn"><a href="/admin" class="linkk">admin</a></button>
+
+                <button type="submit" class="btn btn-primary Submit">Submit</button></a>
+            </div>
+        </div>
+
+
+
+    </div>
+</form>
+
+
+
+
+
+
+<!-- {% for info in allinfo %}
+<div class="upld">
+    <H3 class="pro-slo">PROJECT - {{loop.index}}</H3>
+    <p class="upl"> name = {{info.project_name}}</p>
+        <p class="upl"> project_link = {{info.id}}</p>
+        <img src="/upload/{{info.id}}" alt="prob">
+        <p class="upl"> project_description = {{info.project_description}}</p>
+        <p class="upl"> reach-link = {{info.project_reach_link}}</p>
+        <p class="upl"> project_language = {{info.project_language}}</p>
+
+<a href="/deletee/{{info.id}}" type="button" class="btn-delete">Delete</button></a>
+<a href="/update/{{info.id}}" type="button" class="btn-delete">update</button></a>
+</div>
+{% endfor %} -->
+<div class="images_upld_top">
+
+    {% for info in allinfo %}
+
+    <div class="images_upld">
+        <div class="img_upl">
+
+            {% if info.img%}
+            <img src="/upload/{{info.id}}" class="img_upl" alt="prob">
+
+
+            {% else%}
+
+
+            <img src="{{image}}" class="imgp hidden" alt="problem">
+            {% endif %}
+            <H3 class="pro-slo">PROJECT - {{loop.index}}</H3>
+            <p>ID: {{info.id}}</p>
+            <p class="upl"> name = {{info.project_name}}</p>
+            <p class="upl"> reach-link = {{info.project_reach_link}}</p>
+        </div>
+        <div class="but">
+            <button type="button" class="btn"><a href="/deletee/{{info.id}}">Delete</a></button>
+            {% if info.img%}
+            <button type="button" class="btn" data-bs-dismiss="alert"><a href="/update/{{info.id}}">update</a></button>
+            <button type="button" class="btn" data-bs-dismiss="alert"><a href="/upload/{{info.id}}">view</a></button>
+            <p class="upl"> project_description = {{info.project_description}}</p>
+            <p class="upl"> project_language = {{info.project_language}}</p>
+            <p>file name: {{info.name}}</p>
+            {% else%}
+            <p class="upl"> project_description = bad upload</p>
+            <p class="upl"> project_language = bad upload</p>
+            <p>file name: bad upload</p>
+            {% endif %}
+
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

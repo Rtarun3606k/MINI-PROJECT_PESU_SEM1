@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{allinfo.id}}{{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<h3></h3>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<form class="hidden form-admin form-p" action="/cIndexUpl/{{infos.id}}" method="POST" >
+    <div class="formdiv">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">first-pharagraph</label>
+            <textarea  id="exampleInputPassword1" class="form-control" cols="15" rows="10" value="" name="first-pharagraph" >{{infos.first_para}}</textarea>
+           
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">second-pharagraph</label>
+            <textarea  id="exampleInputPassword1" class="form-control" cols="15" rows="10" value=""  name="second-pharagraph">{{infos.second_para}}</textarea>
+            
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">update</button>
+    </div>
+</form>
+
+
+{% endblock %}

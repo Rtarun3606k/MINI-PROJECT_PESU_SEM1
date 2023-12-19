@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+
+
+<center>
+    <h3>form to Update self image</h3>
+  </center>
+  <center>
+    <div class="formm">
+    <form action="" enctype="multipart/form-data"  method="POST">
+      <div class="form">
+        <div class="pic">
+          <label for="pic">select image <picture></picture> </label>
+          <input type="file" name="pic" /> <span><img src="/self/{{allinfo.id}}" width="200px" height="200px" alt="prob"></span>
+        </div>
+        <div class="pic">
+          <label for="upld_name">Name of the image</label>
+          <input type="text" name="upld_name" value="{{allinfo.name_img}}">
+        </div>
+        <div class="pic">
+          <input type="submit" value="Submit Form" class="btn btnm" />
+        </div>
+        <div class="pic">
+          <h5 for="btn">click here to return to admin page</h5>
+          <button class="btn" name="btn"><a href="/admin" class="linkk">admin</a></button>
+        </div>
+      </div>
+  
+    </form>
+  </div>
+
+
+  {% endblock %}

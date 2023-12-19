@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+
+<form class="hidden form-admin" action="/update/{{infos.id}}" method="POST" enctype="multipart/form-data">
+    <div class="formdiv">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">first-pharagraph</label>
+            <input type="text" class="form-control" value="{{infos.project_description}}" name="first-pharagraph" id="exampleInputPassword1" >
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">second-pharagraph</label>
+            <input type="text" class="form-control" value="{{infos.project_description}}" name="second-pharagraph" id="exampleInputPassword1" >
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">update</button>
+    </div>
+</form>
+
+
+
+{% endblock %}

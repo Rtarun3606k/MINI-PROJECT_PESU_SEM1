@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{allinfo.id}}{{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<h3></h3>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<center>
+    <h1>Form to insert name</h1>
+</center>
+
+<form class="hidden form-admin"  method="POST">
+    <div class="formdiv">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">full name</label>
+            <input type="text" class="form-control" value="{{allinfo.full_name}}" 
+                name="full-name" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">short name</label>
+            <input type="text"  class="form-control" value="{{allinfo.name}}"
+                name="short-name" id="exampleInputPassword1">
+        </div>
+
+        <div class="btn-flex">
+            <div>
+                <button type="submit" class="btn btn-primary wid-btn">Upload Name</button>
+            </div>
+            <div>
+                <button class="btn btn-primary wid-btn"><a href="/admin" class="linkk">admin</a></button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+{% endblock %}

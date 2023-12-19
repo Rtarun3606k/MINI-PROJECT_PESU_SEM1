@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+
+
+
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+
+<form class="hidden form-admin" action="/update/{{infos.id}}" method="POST" enctype="multipart/form-data">
+    <div class="formdiv">
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Name</label>
+            <input type="text" class="form-control" name="project_name" value="{{infos.project_name}}" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="pic">select certificate </label>
+            <input type="file" name="pic" /> <span><img src="/upload/{{infos.id}}" alt="prob" width="200px" height="200px" ></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">link_reach</label>
+            <input type="text" class="form-control" value="{{infos.project_reach_link}}" id="exampleInputEmail1" name="project_reach_link"
+                aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">language</label>
+            <input type="text" class="form-control" value="{{infos.project_language}}" name="project_language" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">description</label>
+            <input type="text" class="form-control" value="{{infos.project_description}}" name="project_desc" id="exampleInputPassword1" >
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">update</button>
+    </div>
+</form>
+
+
+
+{% endblock %}

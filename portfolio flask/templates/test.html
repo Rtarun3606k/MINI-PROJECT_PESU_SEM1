@@ -1,0 +1,73 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+<center>
+  <h3>form to upload certifications</h3>
+</center>
+<center>
+  <div class="formm">
+  <form action="" enctype="multipart/form-data"  method="POST">
+    <div class="form">
+      <div class="pic">
+        <label for="pic">select certificate </label>
+        <input type="file" name="pic" />
+      </div>
+      <div class="pic">
+        <label for="upld_name">Name of the certificate</label>
+        <input type="text" name="upld_name">
+      </div>
+      <div class="pic">
+        <input type="submit" value="Submit Form" class="btn btnm" />
+      </div>
+      <div class="pic">
+        <h5 for="btn">click here to return to admin page</h5>
+        <button class="btn" name="btn"><a href="/admin" class="linkk">admin</a></button>
+      </div>
+    </div>
+
+  </form>
+</div>
+</center>
+<!-- <div class="admin_pg">
+<h5 for="btn">click here to return to admin page</h5>
+<button class="btn" name="btn"><a href="/admin" class="linkk">admin</a></button>
+</div> -->
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{allinfo.id}}{{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<h3></h3>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<div>
+  <div class="images_upld_top">
+    {% for info in allinfo %}
+
+    <div class="images_upld">
+      <div class="img_upl">
+
+        <img src="/upl/{{info.id}}" class="img_upl" alt="prob">
+        <h3>ID: {{info.id}}</h3>
+        <h3>name: {{info.name_certi}}</h3>
+        <h3>file name: {{info.name}}</h3>
+      </div>
+      <div class="but">
+
+        <button type="button" class="btn"><a href="/{{info.id}}">Delete</a></button>
+        <button type="button" class="btn" data-bs-dismiss="alert"><a href="/upl/{{info.id}}">view</a></button>
+        <button type="button" class="btn" data-bs-dismiss="alert"><a href="/upl_update/{{info.id}}">update</a></button>
+      </div>
+    </div>
+
+    {% endfor %}
+
+
+
+
+    {% endblock %}

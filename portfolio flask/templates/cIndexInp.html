@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+<center>
+    <h1>Form to write bio or edit bio</h1>
+</center>
+<form class="hidden form-admin"  method="POST">
+    <div class="formdiv">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">first-pharagraph</label>
+            <textarea type="text" class="form-control" value="{{allinfo.first_para}}" cols="15" rows="8"
+                name="first-pharagraph" id="exampleInputPassword1"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">second-pharagraph</label>
+            <textarea type="text" cols="15" rows="8" class="form-control" value="{{allinfo.second_para}}"
+                name="second-pharagraph" id="exampleInputPassword1"></textarea>
+        </div>
+
+        <div class="btn-flex">
+            <div>
+                <button type="submit" class="btn btn-primary wid-btn">Upload New Bio</button>
+            </div>
+            <div>
+                <button class="btn"><a href="/admin" class="linkk">admin</a></button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="phara">
+
+    {% for para in allinfo %}
+    <p><span>
+            <h2>first-pharagraph : </h2>
+        </span>{{para.first_para}}</p>
+    <p><span>
+            <h2>second-pharagraph : </h2>
+        </span> {{para.second_para}}</p>
+    <button class=" bbtn"><a href="/cIndexUpl/{{para.id}}" class="linkk">update</a></button>
+    <button class=" bbtn"><a href="/cIndexInp_del/{{para.id}}" class="linkk">delete</a></button>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

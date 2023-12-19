@@ -1,0 +1,39 @@
+
+.breark-line{
+    background-color: #03ff03;
+    /* width: 5px; */
+    /* height: 5px; */
+    border: 5px solid grey;
+}
+
+
+.first-phara {
+    margin: 1rem 1rem;
+    padding: 0.5rem 9.2rem;
+}
+
+.fixed-button{
+    margin: 1rem ;
+    background-color: rgb(241, 207, 161);
+    padding: 5px 5px;
+    border-radius: 8px;
+
+}
+
+
+.Resume-btn{
+    margin: 1rem 1rem;
+    padding: 8px 8px;
+
+}
+
+.lefthand div img {
+    height: 96vh;
+    width: 46vw;
+    margin-left: -2%;
+    margin-top: 18%;
+}
+
+p {
+    margin: 0.5rem 3rem;
+}

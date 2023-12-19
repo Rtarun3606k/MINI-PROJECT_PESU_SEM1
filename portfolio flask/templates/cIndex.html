@@ -1,0 +1,115 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cIndex.css') }}">
+
+
+<main>
+  <div class="lefthand  hidden">
+    <div>
+      {% for self in bigs %}
+    
+      <img src="/big/{{self.id}}" alt="" class="hidden">
+      {% endfor %}
+    </div>
+
+  </div>
+  <div class="righthand hidden">
+    {% for self in selfs %}
+    
+    <img src="/self/{{self.id}}" alt="" class="hidden">
+    {% endfor %}
+    {% for n in names %}
+
+    <p class="hidden">{{n.full_name}}</p>
+    {% endfor %}
+    <button  class="Resume-btn btn"><a href="/static/1 (1).png" download="resume" class="linkk hidden">Download My Resume</a></button>
+    <div class="hidden">
+      <div class="hidden">Hello, I am {% for n in names %}<samp class="tarun ">{{n.name}}</samp>{% endfor %} and I am
+        very passinote about
+        <div>
+          <span id="element"></span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</main>
+<hr class="breark-line">
+{% for info in allinfo %}
+
+
+<div class="seemore hidden">
+  <p class="first-phara hidden">
+    {{info.first_para}}
+  </p>
+  <div class="container hidden" id="contentContainer">
+    <p>
+
+      {{info.second_para}}
+
+  </div>
+  {% endfor %}
+  <center><button onclick="toggleContent()" class="fixed-button">See Less</button></center>
+
+</div>
+</div>
+
+<hr class="breark-line">
+<center><h1>My Recent Achivements</h1></center>
+<div class="big-box hidden">
+  <!-- remember syntax for conditronal statements if tostop > loop.index under stand  -->
+  <!-- reference link: https://stackoverflow.com/questions/13897001/how-to-simulate-while-loop-in-jinja2  -->
+
+  {% for info in certificates %}
+  {% if 4>loop.index %}
+
+
+
+  <div class="card  hidden">
+    <div class="card-inner">
+      <div class="card-front">
+        <div class="box1">
+          <img src="/upl/{{info.id}}" alt="image not downloaded" class="radius image">
+          <h1>{{info.name_certi}}</h1>
+          <a href="/upl/{{info.id}}">view</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  {%endif%}
+  {%endfor%}
+  <div class="card  hidden">
+    <h1>see more</h1>
+    <a href="/certi">view</a>
+  </div>
+</div>
+
+
+
+
+
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed('#element', {
+    strings: ['Web Developing', '&amp; Web Designing.', 'Content Writing.', 'Video Editing', 'python development', 'davinci resolve', 'Google cloud console', 'Microsoft Asure', 'Vertex AI', 'Java', 'Django', 'Prompting', 'Open Source'],
+    typeSpeed: 100,
+  });
+</script>
+
+
+
+
+
+
+
+{% endblock %}

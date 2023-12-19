@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <title>{% block title %}
+    port folio
+    {% endblock title %}</title>
+  <script defer src="{{url_for('static', filename='jss/somejavascriptfile.js')}}"></script>
+  <script defer src="{{url_for('static', filename='jss/showmore.js')}}"></script>
+  <script defer src="{{url_for('static', filename='jss/script.js')}}"></script>
+  <script defer src="{{url_for('static', filename='jss/movement.js')}}"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/certi.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index2.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/boxes.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cIndexInp.css') }}">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="see">
+
+
+
+
+  <nav class=" nav-link navbar  navbar-expand-lg sticky-top navbar-custom  hidden ">
+    <div class="container-fluid hidden">
+      <a class="navbar-brand nav-link homeBtn" href="/"> {% for n in names %}
+
+        {{n.name}}
+        {% endfor %}'s Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse hidden bgcol" id="navbarNavDropdown">
+        <ul class="navbar-nav hidden bgcol">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('projects') }}">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('certi') }}">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About ME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact Me</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      More Here
+                    </a>
+                     <ul class="dropdown-menu hidden">
+                      <li><a class="dropdown-item" href="{{ url_for('contact') }}">Contact Me</a></li>
+                       <li><a class="dropdown-item" href="{{ url_for('contact') }}"></a></li> 
+                      <li><a class="dropdown-item" href="{{ url_for('logadmin')}}">Admin</a></li>
+                    </ul> -->
+          <!-- </li>  -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% block body%}
+
+  {% endblock %}
+
+
+
+
+  <footer>
+    <div class="footer-content hidden">
+      <h3>{% for n in names %}
+
+        {{n.name}}
+        {% endfor %}'s Portfolio</h3>
+      <p>know about me and my experience in this field from these many years.</p>
+      <p>Do follow me no my social media handels here are some.</p>
+      <ul class="socials">
+        {% for info in social %}
+
+        <li><a href="{{info.social_link}}"><i class=" fa-facebook"></i><img src="/socials/{{info.id}}" class="fa hidden"
+              alt="prob"> </a></li>
+        <!-- <p>{{info.social_link}}fgh</p> -->
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-bottom hidden">
+      <p>copyright © <a href="/">{% for n in names %}
+
+          {{n.name}}
+          {% endfor %}'s Portfolio </a></p>
+      <p class="newfoot">&nbsp; &nbsp;All Rights Reserved 2023 &#174;</p>
+      <div class="footer-menu hidden">
+        <ul class="f-menu hidden">
+          <li><a href="/">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('contact')}}">Contact</a></li>
+          <li><a href="{{ url_for('projects')}}">Projects</a></li>
+          <li><a href="{{ url_for('logadmin')}}">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+
+    </div>
+
+  </footer>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

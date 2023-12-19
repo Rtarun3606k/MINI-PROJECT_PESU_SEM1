@@ -1,0 +1,38 @@
+.form-p{
+    /* margin: 13rem 2rem; */
+    /* border: 4px solid black; */
+    height: 80vh;
+}
+
+.wid-btn{
+    width: 250px;
+}
+
+.phara{
+    margin: 2rem 3rem;
+}
+
+.bbtn{
+    background-color: rgb(107, 107, 225);
+    width: 80px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: none;
+
+}
+.bbtn:hover{
+    background-color: blue;
+}
+
+.btn-flex{
+    display: flex;
+    gap: 2rem;
+}
+
+.fixed-button{
+    border: none;
+}
+.fixed-button:hover{
+    background-color: rgb(151, 10, 172);
+    color: aliceblue;
+}

@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+
+
+
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+
+<form class="hidden form-admin" action="" method="POST" enctype="multipart/form-data">
+    <div class="formdiv">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{infos.name}}{{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <h3></h3>
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+          <input type="file" name="pic" value="{{infos.name}}" />
+          <input type="text" name="upld_name" value="{{infos.name_certi}}" />
+          <img src="/upl/{{infos.id}}" alt="prob" class="new_img">
+          
+          
+          <!-- <button type="submit" class="btn btn-primary">Update</button> -->
+          <input type="submit" value="Upload a file"/>
+    </div>
+</form>
+
+
+
+{% endblock %}

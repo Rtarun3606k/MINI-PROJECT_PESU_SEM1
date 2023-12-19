@@ -1,0 +1,399 @@
+
+.hello{
+    color: rgb(167, 50, 196);
+}
+
+.allclasses{
+    display: flex;
+    flex-direction: column;
+}
+
+.pixel{
+    font-family: 'Pixelify Sans', cursive;
+    color: var(--text-color);
+
+}
+
+summary {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the details element to remove default styles */
+details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contparent{
+    position: relative;
+    margin: 12px 12px;
+}
+
+.cont{
+    
+    margin: 12px 82px;
+    position: absolute;
+}
+
+.content {
+    height: 100px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+
+
+
+
+.imgp {
+    width: 301px;
+    height: 199px;
+    margin-top: 53px;
+}
+
+
+
+.left {
+    margin-left: 20%;
+}
+
+.mb {
+    /* background-color: white; */
+    height: 20%;
+    width: 13%;
+    border-color: beige;
+    margin-left: 18%;
+}
+
+.mb2 {
+    /* background-color: white; */
+    height: 20%;
+    width: 13%;
+    border-color: beige;
+    margin-left: 7%;
+}
+
+.phar {
+    /* background-color: white; */
+    width: 85%;
+    height: 15%;
+    margin-top: 11%;
+    margin-left: 1%;
+}
+
+
+.lefthand div img {
+    height: 89vh;
+    width: 46vw;
+    margin-left: -2%;
+    margin-top: 10%;
+}
+
+.hr2{
+    margin-top: 10%;
+}
+
+.bs {
+    
+    height: 700px;
+    width: 2px;
+    margin-top: 0%;
+    margin-bottom: 2%;
+    background-color: white;
+    margin-left: 90%;
+    /* margin-left: 17%; */
+    border-radius: 23px;
+}
+
+
+.left {
+    font-size: 31px;
+    font-family: cursive;
+}
+
+.right {
+    font-size: 20px;
+    font-family: cursive;
+    text-transform: capitalize;
+}
+
+main {
+    display: flex;
+    /* margin-top: 20%; */
+    /* justify-content: center; */
+}
+
+.righthand {
+    justify-content: center;
+    width: 60%;
+    height: 20%;
+    /* background-color: red; */
+    margin-left: -20%;
+    margin-right: 10%;
+    margin-top: 15%;
+    font-size: 2.4rem;
+    font-family: cursive;
+}
+
+.righthand div {
+    height: 85vh;
+    width: 21vw;
+}
+
+.lefthand {
+    justify-content: center;
+    width: 60%;
+    height: 20%;
+    /* background-color: red; */
+    margin-left: 10%;
+    margin-right: 30%;
+    margin-top: -5%;
+}
+
+
+#element {
+    color: rgb(125 0 255);
+}
+
+.tarun {
+    color: var(--text-color);
+}
+#element{
+    color: var(--text-color);
+}
+
+hr {
+    background: #af7ef3;
+    height: 1.2px;
+    margin-top: 2px;
+    margin-bottom: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 12px;
+}
+
+.exp {
+    font-size: 2rem;
+    margin-bottom: 10%;
+    margin-left: 8%;
+}
+
+.textgrey {
+    font-size: 1.2rem;
+    margin-bottom: 1%;
+    margin-left: 8%;
+    color: grey;
+}
+
+main {
+    margin-bottom: -20%;
+}
+
+.righthand img {
+    height: 21vh;
+    width: 10vw;
+    border-radius: 230px;
+    margin-top: -30%;
+}
+
+.righthand p {
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: grey;
+}
+
+.start {
+    margin-left: 5%;
+    /* margin-top: 1%; */
+    font-size: 28px;
+    color: #ffff4f;
+}
+
+h3{
+    color: #ffff4f;
+}
+
+.seemore{
+    color: var(--text-color-tarundetails);
+}
+
+.container {
+    display: none; /* Initially hide the content */
+}
+
+.fixed-button {
+    position: relative;
+    bottom: 47px;
+    right: 0px;
+    left: 979px;
+    z-index: 1000;
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    color: var(--see-more);
+    height: 52px;
+    
+    /* color: wheat; */
+    
+}
+
+.first-phara{
+    margin: 10px 185px;
+    font-size: 24px;
+}
+
+.container{
+    font-size: 24px;
+    
+}
+
+
+.breark-line{
+    background-color: #03ff03;
+    /* width: 5px; */
+    /* height: 5px; */
+    border: 5px solid var(--break-line);
+}
+.breark-line2{
+    background-color: #03ff03;
+    /* width: 5px; */
+    /* height: 5px; */
+    border: 5px solid var(--break-line);
+}
+
+
+@media ( max-width: 600px) {
+
+
+    .container{
+        font-size: 20px;
+        
+    }
+    
+    
+    .breark-line{
+        background-color: #03ff03;
+        margin-top: 100px;
+        width: 90vw;
+        margin-right: 10px;
+        margin-left: 20px;
+        /* height: 100vh; */
+        border: 2px solid var(--break-line);
+    }
+    .breark-line2{
+        background-color: #03ff03;
+        margin-top: 10px;
+        width: 90vw;
+        margin-right: 10px;
+        margin-left: 20px;
+        /* height: 100vh; */
+        border: 2px solid var(--break-line);
+    }
+    
+    .first-phara{
+        /* margin: 1px 85px */
+        font-size: 20px;
+        margin-top: 10%;
+        color: var(--text-color-tarundetails);
+        padding: 0 0 ;
+        margin-left: 22px;
+        margin-right: 25px;
+    }
+    
+    .fixed-button {
+        position: relative;
+        bottom: 47px;
+        right: 0px;
+        /* top: px; */
+        left: 179px;
+        z-index: 1000;
+        background-color: transparent;
+        border: none;
+        width: 100px;
+        height: 52px;
+        
+        color: var(--see-more);
+        /* color: wheat; */
+    
+      }
+
+    .top {
+        margin-top: -10%;
+    }
+    .img-adjust{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+        padding: 0, 0;
+    }
+.righthand img {
+    height: 16vh;
+    width: 33vw;
+    border-radius: 230px;
+    margin-top: 3%;
+    margin-left: 21%;
+}
+.left {
+    font-size: 13px;
+    font-family: cursive;
+
+}
+main {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: -38%;
+    /* margin-top: 20%; */
+    /* justify-content: center; */
+    margin-left: 3%;
+}
+.righthand div {
+    height: 33vh;
+    width: 71vw;
+    padding: 12px 12px;
+}
+.righthand {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 24%;
+    /* background-color: red; */
+    margin-left: 6%;
+    /* margin-right: 19%; */
+    margin-top: 40%;
+    font-size: 30px;
+    font-family: cursive;
+}
+h3 {
+    color: #ffff4f;
+    font-size: 19px;
+}
+
+
+body {
+    /* background-color: rgb(0, 0, 0); */
+    overflow-x: hidden;
+  }
+  .lefthand div img {
+    display: none;
+      height: 46vh;
+      width: 80vw;
+      /* margin-left: 10%; */
+      margin-right: 10%;
+      /* margin-bottom: 20%; */
+      margin-top: -34%;
+  }
+
+
+  .imgp {
+    width: 107px;
+    height: 70px;
+    margin-top: 12px;
+}
+}

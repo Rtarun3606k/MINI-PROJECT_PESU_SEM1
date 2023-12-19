@@ -1,0 +1,99 @@
+{% extends 'base.html'%}
+
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+<!-- 
+<form class="hidden form-admin" action="/project" method="POST">
+  <div class="formdiv">
+  
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Name</label>
+    <input type="text" class="form-control" name="project_name" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">link picture</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="project_link" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">link_reach</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="project_reach_link" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">language</label>
+    <input type="text" class="form-control" name="project_language" id="exampleInputPassword1"> 
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">description</label>
+    <textarea type="text" class="form-control" name="project_desc" id="exampleInputPassword1" rows="2" cols="1"> </textarea>
+  </div>
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form> -->
+
+<div class="bc">
+  <div class="box_bc">
+    <h4>LINK FOR Project Updation</h4>
+    <button type="button" class="btn"><a href="{{ url_for('upload')}}" class="" style="text-decoration: none; color: white;">upload Project</a></button>
+  </div>
+  <div class="box_bc">
+    <h4>LINK FOR Certificate Updation</h4>
+    <button type="button" class="btn"><a href="{{ url_for('upl')}}" class="" style="text-decoration: none; color: white;">upload Certificate</a></button>
+  </div>
+  <div class="box_bc">
+    <h4>LINK FOR Bio Updation</h4>
+    <button type="button" class="btn"><a href="{{ url_for('cIndexInp')}}" class="" style="text-decoration: none; color: white;">Update Bio </a></button>
+  </div>
+
+  <div class="box_bc">
+    <h4>LINK FOR Name Updation</h4>
+    <button type="button" class="btn"><a href="{{ url_for('cIndexName')}}" class="" style="text-decoration: none; color: white;">Update Name</a></button>
+  </div>
+
+  <div class="box_bc">
+    <h4>LINK FOR Socials Updation</h4>
+     <button type="button" class="btn"><a href="{{ url_for('social')}}" class="" style="text-decoration: none; color: white;">Update Socials</a></button>
+  </div>
+
+  <div class="box_bc">
+    <h4>LINK FOR big img Updation</h4>
+     <button type="button" class="btn"><a href="{{ url_for('big')}}" class="" style="text-decoration: none; color: white;">Update big img</a></button>
+  </div>
+
+  <div class="box_bc">
+    <h4>LINK FOR small img Updation</h4>
+     <button type="button" class="btn"><a href="{{ url_for('self')}}" class="" style="text-decoration: none; color: white;">Update small img</a></button>
+  </div>
+</div>
+
+
+   <h2><a href="/admin" style="text-decoration: none; color: aliceblue;">Login logs</a></h2>
+{% for info in allinfo %}
+    <hr class="newhr">
+<div class="contactboxes">
+    <div class="contright">
+        <p> id = {{loop.index}}</p>
+        <p> name = {{info.name}}</p>
+        <p> email = {{info.email}}</p>
+        <p> date_created = {{info.date_created}}</p>
+        
+        <!-- <p> pa ={{info.message}}</p> -->
+    </div>
+    <div class="contleft">
+        <p> message ={{info.pa}}</p>
+    </div>
+    <a href="/delete/{{info.id}}" type="button" class="btn">Delete</button></a>
+    <hr class="newhr">
+   
+    {% endfor %}
+    
+</div>
+
+
+
+
+{% endblock %}

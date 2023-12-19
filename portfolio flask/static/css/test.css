@@ -1,0 +1,283 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #fff;
+    background: #111;
+    font-family: 'Poppins',sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    backdrop-filter: blur(3px);
+    pointer-events: none;
+}
+
+.container nav{
+    width: 100%;
+    display: flex;
+    opacity: 0.8;
+    background-color: transparent;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 40px;
+    height: 100px;
+    align-items: center;
+}
+
+.container nav h1{
+    font-size: 2.6em;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    pointer-events: all;
+    letter-spacing: 4px;
+}
+
+.container nav h1 span{
+    color: #00bfff;
+}
+
+.container nav ul{
+    display: flex;
+}
+
+.container nav ul li{
+    position: relative;
+    list-style: none;
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: 12px 18px;
+    cursor: pointer;
+    pointer-events: all;
+    overflow: hidden;
+}
+
+.container nav ul li::after{
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    width: 0%;
+    height: 3px;
+    left: 50%;
+    background: #00bfff;
+    transform: translateX(-50%);
+    transition: .3s;
+}
+
+.nav-link{
+    cursor: pointer;
+}
+
+.container nav li:hover{
+    color: #00bfff;
+}
+
+.container nav li:hover::after{
+    width: 80%;
+}
+
+.container section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    text-align: center;
+    pointer-events: none;
+}
+
+.textBox h1{
+    font-size: 3.4em;
+}
+
+.textBox h1 span{
+    color: #00bfff;
+}
+
+.textBox p{
+    font-size: 1.2em;
+}
+
+.textBox .homeBtn{
+    font-family: 'Poppins';
+    padding: 8px 18px;
+    margin: 16px 12px;
+    font-size: 26px;
+    background-color: transparent;
+    color: var(--i);
+    outline: none;
+    border: 1px solid var(--i);
+    border-radius: 4px;
+    cursor: pointer;
+    pointer-events: all;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.textBox .homeBtn:hover{
+    background-color: var(--i);
+    color: #000;
+}
+
+.bgAnimation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    background: #1d1d1d;
+    filter: saturate(2);
+    overflow: hidden;
+}
+
+.colorBox{
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+    margin: 2px;
+    background: #1d1d1d;
+}
+
+.colorBox:hover{
+    background: #00bfff;
+    transition-duration: 0s;
+}
+
+.backgroundAmim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #00bfff;
+    filter: blur(60px);
+    animation: animBack 6s linear infinite;
+}
+
+@keyframes animBack {
+    0%{
+        top: -60px;
+    }
+    100%{
+        top: 120%;
+    }
+} */
+.sub-admin{
+    display: flex;
+}
+
+.Submit{
+    display: flex;
+    left: 15rem;
+    margin-right: -10rem;
+}
+
+.admin{
+    margin: 0 0;
+}
+.formm{
+    display: flex;
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+    height: 488px;
+    border-radius: 12px;
+    background-color: rgb(70, 56, 83);
+}
+
+.form{
+    display: flex;
+    /* background: red; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pic label{
+    margin: 5px 5px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 12px;
+}
+
+.btnm{
+    margin: 12px 12px;
+}
+
+
+.images_upld_top{
+    margin: 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.images_upld{
+    width: 500px;
+    height: 500px;
+    display: flex;
+}
+.img_upl img{
+    width: 300px;
+    height: 300px;
+    margin: 5px 5px;
+}
+.but button a ,.linkk{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+  }
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px ;
+  margin: 12px 12px;
+  text-align: center;
+  /* background-color: #f1f1f1; */
+}
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+    
